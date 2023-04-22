@@ -4,7 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap w/ Webpack</title>
+    <title>Axiom</title>
+
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    </head>
+
 </head>
 
 <body>
@@ -102,7 +108,7 @@
             <h1 class="text-center display-5 fw-bold">What we offer</h1>
             <!-- Three columns of text below the carousel -->
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="fade-up">
                     <div class="bd-placeholder-dt rounded-circle" width="140" height="140"
                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
                         preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -116,7 +122,7 @@
                         in
                         the digital age.</p>
                 </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="fade-up">
                     <div class="bd-placeholder-agile rounded-circle" width="140" height="140"
                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
                         preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -130,7 +136,7 @@
                         meet your customers' expectations.
                     </p>
                 </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="fade-up">
                     <div class="bd-placeholder-data rounded-circle" width="140" height="140"
                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
                         preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -152,7 +158,7 @@
         <hr class="featurette-divider">
 
         <section id="projects">
-            <div class="row featurette">
+            <div class="row featurette" data-aos="fade-right">
                 <div class="col-md-7">
                     <h2 class="featurette-heading fw-normal lh-1">Insurance</h2>
                     <p class="lead">Our data analytics and artificial intelligence solutions help insurance companies
@@ -171,7 +177,7 @@
 
             <hr class="featurette-divider">
 
-            <div class="row featurette">
+            <div class="row featurette" data-aos="fade-left">
                 <div class="col-md-7 order-md-2">
                     <h2 class="featurette-heading fw-normal lh-1">Retail</h2>
                     <p class="lead">Our web and mobile development services help retailers create engaging online
@@ -191,7 +197,7 @@
 
             <hr class="featurette-divider">
 
-            <div class="row featurette">
+            <div class="row featurette" data-aos="fade-right">
                 <div class="col-md-7">
                     <h2 class="featurette-heading fw-normal lh-1">Supply Chain</h2>
                     <p class="lead">Our cloud computing and data analytics solutions can help optimize every stage of
@@ -214,7 +220,7 @@
         <hr class="featurette-divider">
 
         <section id="about">
-            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+            <div class="p-5 mb-4 bg-body-tertiary rounded-3" data-aos="fade-up">
                 <div class="container-fluid py-5">
                     <div class="row">
                         <div class="col-lg-8">
@@ -291,39 +297,46 @@
         <p class="float-end"><a href="#">Back to top</a></p>
         <p>&copy; <span id="year"></span> Axiom</p>
     </footer>
-</body>
 
-<script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
+    <script>
 
-    const sections = document.querySelectorAll('section');
-    const links = Array.from(document.querySelectorAll('.nav-link'))
-        .reduce((result, link) => {
-            result.set(link.hash.replace('#', ''), link);
-            return result;
-        }, new Map());
-
-    const options = {
-        threshold: 0.4
-    };
-    function callback(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Add active class to the section that is currently in view
-                links.get(entry.target.id).classList.add('active');
-                console.log(entry.target);
-            } else {
-                // Remove active class from the section that is no longer in view
-                links.get(entry.target.id).classList.remove('active');
-            }
+        AOS.init({
+            once: true,
+            duration: 1000, // values from 0 to 3000, with step 50ms
         });
-    }
-    const observer = new IntersectionObserver(callback, options);
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+        document.getElementById("year").innerHTML = new Date().getFullYear();
 
-</script>
+        const sections = document.querySelectorAll('section');
+        const links = Array.from(document.querySelectorAll('.nav-link'))
+            .reduce((result, link) => {
+                result.set(link.hash.replace('#', ''), link);
+                return result;
+            }, new Map());
+
+        const options = {
+            threshold: 0.4
+        };
+        function callback(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add active class to the section that is currently in view
+                    links.get(entry.target.id).classList.add('active');
+                    console.log(entry.target);
+                } else {
+                    // Remove active class from the section that is no longer in view
+                    links.get(entry.target.id).classList.remove('active');
+                }
+            });
+        }
+        const observer = new IntersectionObserver(callback, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+    </script>
+
+</body>
 
 </html>
