@@ -40,6 +40,7 @@ nav {
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .bd-placeholder-ai {
@@ -51,6 +52,7 @@ nav {
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .bd-placeholder-dev {
@@ -62,6 +64,7 @@ nav {
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .bd-placeholder-dt {
@@ -71,6 +74,7 @@ nav {
     height: 140px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin: 0 auto;
 }
 
@@ -81,6 +85,7 @@ nav {
     height: 140px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin: 0 auto;
 }
 
@@ -91,6 +96,7 @@ nav {
     height: 140px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin: 0 auto;
 }
 
@@ -98,6 +104,7 @@ nav {
     background-image: url('/src/assets/images/insurtech.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 500px;
     height: 500px;
 }
@@ -106,6 +113,7 @@ nav {
     background-image: url('/src/assets/images/retail.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 500px;
     height: 500px;
 }
@@ -114,6 +122,7 @@ nav {
     background-image: url('/src/assets/images/supply-chain.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 500px;
     height: 500px;
 }
@@ -194,7 +203,7 @@ nav {
 
 .contact-info {
     font-size: x-large;
-    margin-left: 2em;
+    margin: auto;
 }
 
 .contact-info i {
