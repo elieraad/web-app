@@ -1,6 +1,19 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
 
+nav {
+    font-size: large;
+}
+
+.navbar-brand {
+    font-size: xx-large;
+}
+
+.navbar-container {
+    margin-left: 1em;
+    margin-right: 1em;
+}
 
 /* Carousel base class */
 .carousel {
@@ -15,7 +28,7 @@
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-    height: 32rem;
+    height: calc(100vh - 64px);
 }
 
 .bd-placeholder-bi {
@@ -88,6 +101,35 @@
     width: 500px;
     height: 500px;
 }
+
+.bd-placeholder-retail {
+    background-image: url('/src/assets/images/retail.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+}
+
+.bd-placeholder-supply {
+    background-image: url('/src/assets/images/supply-chain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+}
+
+.bd-placeholder-about {
+    background-image: url('/src/assets/images/about-right-dec.png');
+    /* Full height */
+    height: 60vh;
+    margin-top: 5em;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
@@ -147,4 +189,16 @@
 
 #title {
     text-transform: uppercase;
+}
+
+
+.contact-info {
+    font-size: x-large;
+    margin-left: 2em;
+}
+
+.contact-info i {
+    font-size: large;
+    color: rgb(31, 104, 191);
+    margin-right: 1em;
 }
