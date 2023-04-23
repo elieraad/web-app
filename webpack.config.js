@@ -10,8 +10,6 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
-    // your stuff
-    publicPath: "/assets/",
   },
   devServer: {
     static: path.resolve(__dirname, "dist"),
