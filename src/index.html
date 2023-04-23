@@ -315,14 +315,13 @@
             }, new Map());
 
         const options = {
-            threshold: 0.4
+            threshold: 0.3
         };
         function callback(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     // Add active class to the section that is currently in view
                     links.get(entry.target.id).classList.add('active');
-                    console.log(entry.target);
                 } else {
                     // Remove active class from the section that is no longer in view
                     links.get(entry.target.id).classList.remove('active');
