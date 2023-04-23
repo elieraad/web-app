@@ -17,7 +17,7 @@ module.exports = {
       directory: path.join(__dirname, 'src'),
       watch: false,
     },
-    port: 3000,
+    port: 8080,
     open: true,
   },
   plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
