@@ -12,9 +12,13 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
-    static: path.resolve(__dirname, "dist"),
-    port: 8080,
-    hot: true,
+    watchFiles: ['src/**/*'],
+    static: {
+      directory: path.join(__dirname, 'src'),
+      watch: false,
+    },
+    port: 3000,
+    open: true,
   },
   plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
   module: {
