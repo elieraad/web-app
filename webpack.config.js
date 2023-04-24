@@ -20,7 +20,10 @@ module.exports = {
     port: 8080,
     open: true,
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  plugins: [new HtmlWebpackPlugin({ 
+    template: "./src/index.html",
+    scriptLoading: 'blocking'
+   })],
   module: {
     rules: [
       {
