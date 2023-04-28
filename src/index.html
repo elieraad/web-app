@@ -7,12 +7,6 @@
     <title>Axiom, a leading software company in the MENA region!</title>
     <meta name="description"
         content="Welcome to Axiom! One of the leading software development companies in the Middle East. We offer top-quality data analytics, artificial intelligence, and software development services to help businesses streamline their operations, improve outcomes, and drive growth. Contact us today to learn how we can help transform your business in the digital age.">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    <script defer src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-
 </head>
 
 <body>
@@ -65,7 +59,8 @@
                     <div class="container">
                         <div class="carousel-caption text-start">
                             <h1>Data Analytics</h1>
-                            <p>Axiom will help you manage and analyze data to improve outcomes and streamline operations</p>
+                            <p>Axiom will help you manage and analyze data to improve outcomes and streamline operations
+                            </p>
                             <p><a class="btn btn-lg btn-primary" href="#contact">Inquiry Now</a></p>
                         </div>
                     </div>
@@ -75,7 +70,8 @@
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Artificial Intelligence</h1>
-                            <p> Axiom offers AI solutions help clients automate routine tasks, reduce errors, and improve
+                            <p> Axiom offers AI solutions help clients automate routine tasks, reduce errors, and
+                                improve
                                 efficiency</p>
                             <p><a class="btn btn-lg btn-primary" href="#contact">Learn more</a></p>
                         </div>
@@ -86,7 +82,8 @@
                     <div class="container">
                         <div class="carousel-caption text-end">
                             <h1>Software Development</h1>
-                            <p>At Axiom, we develop scalable and secure digital solutions tailored to your business needs</p>
+                            <p>At Axiom, we develop scalable and secure digital solutions tailored to your business
+                                needs</p>
                             <p><a class="btn btn-lg btn-primary" href="#contact">Get in touch</a></p>
                         </div>
                     </div>
@@ -149,7 +146,8 @@
                         Our skilled professionals will help you
                         harness the insights buried in your data to improve decision-making, optimize operations, and
                         drive
-                        business value. Trust Axiom to keep your data secure and compliant with the latest regulations and
+                        business value. Trust Axiom to keep your data secure and compliant with the latest regulations
+                        and
                         industry standards.</p>
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
@@ -185,7 +183,8 @@
                     <p class="lead">Axiom web and mobile development services help retailers create engaging online
                         experiences for their customers, while our data analytics solutions provide insights into
                         customer
-                        behavior and preferences. Axiom can help retailers transform their operations and achieve long-term
+                        behavior and preferences. Axiom can help retailers transform their operations and achieve
+                        long-term
                         success.</p>
                 </div>
                 <div class="col-md-5 order-md-1">
@@ -206,7 +205,8 @@
                         the
                         supply chain. From inventory management to logistics, we provide the tools and insights needed
                         to
-                        improve efficiency, reduce costs, and increase profitability. Let Axiom help you take your supply
+                        improve efficiency, reduce costs, and increase profitability. Let Axiom help you take your
+                        supply
                         chain
                         to the next level.</p>
                 </div>
@@ -251,7 +251,8 @@
                 <div class="col-md-6">
                     <div class="p-5 mb-4 bg-body-tertiary rounded-3">
                         <h1 class="display-5 fw-bold">Contact Axiom</h1>
-                        <p>Axiom team of experts will be more than happy to get in touch and answer all of your questions.
+                        <p>Axiom team of experts will be more than happy to get in touch and answer all of your
+                            questions.
                         </p>
                         <div class="contact-info">
                             <p><i class="bi bi-geo-alt-fill" style="color:dodgerblue;"></i> Beirut, Lebanon</p>
@@ -312,71 +313,6 @@
         <p>&copy; <span id="year"></span> Axiom</p>
     </footer>
 
-    <script>
-
-        AOS.init({
-            once: true,
-            duration: 1000, // values from 0 to 3000, with step 50ms
-        });
-
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-
-        const sections = document.querySelectorAll('section');
-        const links = Array.from(document.querySelectorAll('.nav-link'))
-            .reduce((result, link) => {
-                result.set(link.hash.replace('#', ''), link);
-                return result;
-            }, new Map());
-
-        const options = {
-            threshold: 0.3
-        };
-        function callback(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Add active class to the section that is currently in view
-                    links.get(entry.target.id).classList.add('active');
-                } else {
-                    // Remove active class from the section that is no longer in view
-                    links.get(entry.target.id).classList.remove('active');
-                }
-            });
-        }
-        const observer = new IntersectionObserver(callback, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        const emailjsLoaded = false;
-        const contactForm = document.getElementById('contact-form');
-        contactForm.addEventListener('submit', (event) => {
-            event.preventDefault(); // Prevent the form from submitting normally
-
-        
-            var templateParams = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
-            contactForm.reset();
-
-            if(!emailjsLoaded) {
-                emailjs.init("MgcX3FIwAK5Guq8BG");
-                emailjsLoaded = true;
-            }       
-
-
-            emailjs.send('service_j8jqgeh', 'template_t1cf9md', templateParams)
-                .then((response) => {
-                    const toastSuccess = new bootstrap.Toast(document.getElementById('toast-success'));
-                    toastSuccess.show();
-                }, (error) => {
-                    const toastError = new bootstrap.Toast(document.getElementById('toast-error'));
-                    toastError.show();
-                });
-        });
     </script>
 
 </body>
