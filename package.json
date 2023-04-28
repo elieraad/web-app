@@ -7,7 +7,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve",
+    "start": "webpack-dev-server --mode development",
     "cypress:open": "npm start & cypress open",
     "build": "webpack build --mode=production",
     "predeploy": "npm run build",
@@ -23,6 +23,7 @@
     "gh-pages": "^5.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
+    "mini-css-extract-plugin": "^2.7.5",
     "postcss-loader": "^7.2.4",
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2",
@@ -32,9 +33,11 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@popperjs/core": "^2.11.7",
+    "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.10.4",
+    "bootstrap-icons": "^1.10.5",
     "emailjs-com": "^3.2.0"
   }
 }
