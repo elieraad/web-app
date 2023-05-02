@@ -39,9 +39,13 @@ nav {
 
     width: 100%;
     height: 100%;
+
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
 }
 
 .bd-placeholder-ai {
@@ -51,9 +55,11 @@ nav {
 
     width: 100%;
     height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
 }
 
 .bd-placeholder-dev {
@@ -63,9 +69,11 @@ nav {
 
     width: 100%;
     height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
 }
 
 .bd-placeholder-dt {
@@ -108,6 +116,7 @@ nav {
     background-position: center;
     width: 500px;
     height: 500px;
+    border-radius: 10px;
 }
 
 .bd-placeholder-retail {
@@ -117,6 +126,7 @@ nav {
     background-position: center;
     width: 500px;
     height: 500px;
+    border-radius: 10px;
 }
 
 .bd-placeholder-supply {
@@ -126,6 +136,7 @@ nav {
     background-position: center;
     width: 500px;
     height: 500px;
+    border-radius: 10px;
 }
 
 .bd-placeholder-about {
@@ -203,7 +214,7 @@ nav {
 
 
 .contact-info {
-    font-size: x-large;
+    font-size: large;
     margin: auto;
 }
 

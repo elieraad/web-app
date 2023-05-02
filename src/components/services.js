@@ -15,7 +15,7 @@ export default function Services() {
           profitability in the digital age.
         </p>
       </div>
-      <div className="col-lg-4" data-aos="fade-up">
+      <div className="col-lg-4" data-aos="fade-up" data-aos-delay="500">
         <div className="bd-placeholder-agile rounded-circle"></div>
         <h2 className="fw-normal">Business Agility</h2>
         <p style={{ marginTop: "1em", textAlign: "left" }}>
@@ -26,7 +26,7 @@ export default function Services() {
           your customers' expectations.
         </p>
       </div>
-      <div className="col-lg-4" data-aos="fade-up">
+      <div className="col-lg-4" data-aos="fade-up" data-aos-delay="1000">
         <div className="bd-placeholder-data rounded-circle"></div>
         <h2 className="fw-normal">Data Management</h2>
         <p style={{ marginTop: "1em", textAlign: "left" }}>
