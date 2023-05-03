@@ -82,13 +82,6 @@ export default function Contact() {
                 ></i>{" "}
                 info@axiomtech.me
               </p>
-              <p>
-                <i
-                  className="bi bi-phone-fill"
-                  style={{ color: "dodgerblue" }}
-                ></i>{" "}
-                +961 76 472 889
-              </p>
             </div>
             <div className="d-flex my-4">
               <p className="mb-0 me-2 align-self-center">Find us here:</p>
