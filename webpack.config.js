@@ -4,6 +4,7 @@ const path = require("path");
 const autoprefixer = require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -26,6 +27,21 @@ module.exports = {
       template: "index.html",
     }),
     new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "**/*.html",
+          globOptions: {
+            ignore: [
+              "**/node_modules/**",
+              "**/dist/**",
+              "**/cypress/**",
+              "**/index.html",
+            ],
+          },
+        },
+      ],
+    }),
   ],
   module: {
     rules: [
