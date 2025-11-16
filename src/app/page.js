@@ -12,10 +12,12 @@ import {
   CheckCircle,
   Menu,
   X,
+  ExternalLink,
 } from "lucide-react";
 import Image from "next/image";
 import emailjs from "emailjs-com";
 import ContactForm from "./ContactForm";
+import Link from "next/link";
 
 // Sample projects focused on dropshipping and private label e-commerce
 const projects = [
@@ -89,11 +91,14 @@ const AxiomLanding = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-black bg-opacity-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-16">
-            <div className="text-xl sm:text-2xl font-bold tracking-wider">
+            <Link
+              href="/"
+              className="text-xl sm:text-2xl font-bold tracking-wider"
+            >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 AXIOM
               </span>
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -114,6 +119,15 @@ const AxiomLanding = () => {
                 className="hover:text-blue-400 transition-colors duration-300"
               >
                 Contact
+              </a>
+              <a
+                href="/careers"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-1 px-3 hover:text-blue-400 transition-colors duration-300"
+              >
+                <span>Careers</span>
+                <ExternalLink className="w-4 h-4 text-gray-400" />
               </a>
             </div>
 
@@ -159,6 +173,15 @@ const AxiomLanding = () => {
                 onClick={toggleMobileMenu}
               >
                 Contact
+              </a>
+              <a
+                href="/careers"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center px-3 py-2 text-base font-medium hover:text-blue-400 transition-colors duration-300"
+              >
+                <span>Careers</span>
+                <ExternalLink className="w-4 h-4 text-gray-400" />
               </a>
             </div>
           </div>
